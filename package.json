@@ -1,68 +1,68 @@
 {
-	"name": "git-user-local",
-	"version": "0.0.0",
-	"description": "Get Git user info from local git config",
-	"license": "MIT",
-	"repository": "LasaleFamine/git-user-local",
-	"main": "src/index.js",
-	"bugs": {
-		"url": "https://github.com/LasaleFamine/git-user-local/issues",
-		"email": "info@godev.space"
-	},
-	"homepage": "https://github.com/LasaleFamine/git-user-local",
-	"author": {
-		"name": "LasaleFamine",
-		"email": "info@godev.space",
-		"url": "godev.space"
-	},
-	"engines": {
-		"node": ">=8"
-	},
-	"scripts": {
-		"release": "git pull && standard-version",
-		"test": "xo && nyc ava",
-		"test:travis": "yarn test && nyc report --reporter=text-lcov > coverage.lcov && codecov"
-	},
-	"files": [
-		"src"
-	],
-	"keywords": [
-		"git-user-local",
-		"git-user-info",
-		"git-user",
-		"git",
-		"username-git",
-		"email-git",
-		"git-local-user",
-		"email-git-local",
-		"username-git-local"
-	],
-	"dependencies": {
-		"ini": "1.3.5"
-	},
-	"devDependencies": {
-		"ava": "0.20.0",
-		"codecov": "2.2.0",
-		"nyc": "11.0.0",
-		"standard-version": "4.2.0",
-		"xo": "0.18.2"
-	},
-	"xo": {
-		"rules": {
-			"max-len": [
-				"error",
-				{
-					"code": 110,
-					"ignoreUrls": true
-				}
-			],
-			"capitalized-comments": "off"
-		}
-	},
-	"nyc": {
-		"reporter": [
-			"lcov",
-			"text"
-		]
-	}
+  "name": "git-user-local",
+  "version": "0.1.0",
+  "description": "Get Git user info from local git config",
+  "license": "MIT",
+  "repository": "LasaleFamine/git-user-local",
+  "main": "src/index.js",
+  "bugs": {
+    "url": "https://github.com/LasaleFamine/git-user-local/issues",
+    "email": "info@godev.space"
+  },
+  "homepage": "https://github.com/LasaleFamine/git-user-local",
+  "author": {
+    "name": "LasaleFamine",
+    "email": "info@godev.space",
+    "url": "godev.space"
+  },
+  "engines": {
+    "node": ">=8"
+  },
+  "scripts": {
+    "release": "git pull && standard-version",
+    "test": "xo && nyc ava",
+    "test:travis": "yarn test && nyc report --reporter=text-lcov > coverage.lcov && codecov"
+  },
+  "files": [
+    "src"
+  ],
+  "keywords": [
+    "git-user-local",
+    "git-user-info",
+    "git-user",
+    "git",
+    "username-git",
+    "email-git",
+    "git-local-user",
+    "email-git-local",
+    "username-git-local"
+  ],
+  "dependencies": {
+    "ini": "1.3.5"
+  },
+  "devDependencies": {
+    "ava": "0.20.0",
+    "codecov": "2.2.0",
+    "nyc": "11.0.0",
+    "standard-version": "4.2.0",
+    "xo": "0.18.2"
+  },
+  "xo": {
+    "rules": {
+      "max-len": [
+        "error",
+        {
+          "code": 110,
+          "ignoreUrls": true
+        }
+      ],
+      "capitalized-comments": "off"
+    }
+  },
+  "nyc": {
+    "reporter": [
+      "lcov",
+      "text"
+    ]
+  }
 }
