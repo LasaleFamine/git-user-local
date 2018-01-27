@@ -1,4 +1,6 @@
 # git-user-local
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/LasaleFamine/git-user-local.svg)](https://greenkeeper.io/)
 [![Build Status](https://travis-ci.org/LasaleFamine/git-user-local.svg?branch=master)](https://travis-ci.org/LasaleFamine/git-user-local) [![codecov](https://codecov.io/gh/LasaleFamine/git-user-local/badge.svg?branch=master)](https://codecov.io/gh/LasaleFamine/git-user-local?branch=master)
 
 > Get Git user info from local git config
