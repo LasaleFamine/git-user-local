@@ -13,12 +13,11 @@ const getConfigPath = configPath => {
 	return existsSync(mainConfigPath) ? mainConfigPath : null;
 };
 
-module.exports = async configPath => {
+module.exports = configPath => {
 	const gcPath = getConfigPath(configPath);
 	if (!gcPath) {
 		throw new Error('[git-user-local]: cannot find .gitconfig file on the system.');
 	}
 
-	const gcContent = await pReadFile(gcPath, 'utf8');
-	return ini.parse(gcContent);
+	return pReadFile(gcPath, 'utf8').then(gcContent => ini.parse(gcContent));
 };
