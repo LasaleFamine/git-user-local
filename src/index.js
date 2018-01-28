@@ -1,12 +1,9 @@
 'use strict';
 
-const {promisify} = require('util');
 const path = require('path');
 const {existsSync, readFile} = require('fs');
 const {homedir} = require('os');
 const ini = require('ini');
-
-const pReadFile = promisify(readFile);
 
 const getConfigPath = configPath => {
 	const mainConfigPath = path.resolve(configPath || homedir(), '.gitconfig');
@@ -19,5 +16,8 @@ module.exports = configPath => {
 		throw new Error('[git-user-local]: cannot find .gitconfig file on the system.');
 	}
 
-	return pReadFile(gcPath, 'utf8').then(gcContent => ini.parse(gcContent));
+	return new Promise(resolve =>
+		readFile(gcPath, 'utf8')
+			.then(gcContent => resolve(ini.parse(gcContent))
+	));
 };
