@@ -16,8 +16,9 @@ module.exports = configPath => {
 		throw new Error('[git-user-local]: cannot find .gitconfig file on the system.');
 	}
 
-	return new Promise(resolve =>
-		readFile(gcPath, 'utf8')
-			.then(gcContent => resolve(ini.parse(gcContent))
+	return new Promise((resolve, reject) =>
+		readFile(gcPath, 'utf8', (err, gcContent) =>
+			err ? reject(err) : resolve(ini.parse(gcContent)
+		)
 	));
 };
