@@ -18,7 +18,5 @@ module.exports = configPath => {
 
 	return new Promise((resolve, reject) =>
 		readFile(gcPath, 'utf8', (err, gcContent) =>
-			err ? reject(err) : resolve(ini.parse(gcContent)
-		)
-	));
+			err ? reject(err) : resolve(ini.parse(gcContent))));
 };
