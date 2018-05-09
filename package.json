@@ -43,7 +43,7 @@
   "devDependencies": {
     "ava": "0.25.0",
     "codecov": "3.0.1",
-    "nyc": "11.7.1",
+    "nyc": "11.7.2",
     "standard-version": "4.3.0",
     "xo": "0.20.3"
   },
