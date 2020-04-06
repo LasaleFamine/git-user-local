@@ -1,6 +1,6 @@
-import {resolve} from 'path';
-import test from 'ava';
-import m from './../src';
+const {resolve} = require('path');
+const test = require('ava');
+const m = require('../src');
 
 test('should return git credential correctly', async t => {
 	const info = await m(resolve(__dirname, 'fixture'));
