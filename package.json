@@ -1,6 +1,6 @@
 {
   "name": "git-user-local",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "description": "Get Git user info from local git config",
   "license": "MIT",
   "repository": "LasaleFamine/git-user-local",
